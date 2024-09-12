@@ -1,0 +1,37 @@
+.footer {
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 0.8rem;
+  }
+}

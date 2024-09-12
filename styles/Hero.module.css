@@ -1,0 +1,80 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f5;
+  text-align: center;
+  padding: 0 20px;
+  position: relative; /* Position relative for absolute child positioning */
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.profilePhoto {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px auto; /* Center horizontally and add space below */
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .profilePhoto {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .profilePhoto {
+    width: 100px;
+    height: 100px;
+  }
+}
