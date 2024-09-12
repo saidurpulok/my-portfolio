@@ -1,5 +1,6 @@
 
-This repository contains a Next.js project configured for static export and deployed automatically to GitHub Pages using GitHub Actions.
+This repository contains a simple and minimalist yet modern Next.js portfolio project. 
+Here's a guideline how you can use this repo for your personal portfolio site and deploy automatically to GitHub Pages using GitHub Actions.
 
 ## Prerequisites
 
@@ -17,7 +18,7 @@ git clone https://github.com/saidurpulok/my-portfolio.git
 cd my-portfolio
 ```
 
-You can then copy the folder contents to a folder named `your-username.github.io`
+You can then copy the folder contents to a folder named `your-username.github.io`, and then change all the
 
 ## Installation
 
@@ -92,4 +93,3 @@ Contributions are welcome! Feel free to open a pull request with any changes or 
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
-```
