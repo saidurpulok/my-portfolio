@@ -1,7 +1,3 @@
-Here's an updated version of the README file, taking into account that you used GitHub Actions for deployment:
-
-```markdown
-# Next.js Static Site for GitHub Pages (via GitHub Actions)
 
 This repository contains a Next.js project configured for static export and deployed automatically to GitHub Pages using GitHub Actions.
 
