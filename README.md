@@ -18,7 +18,7 @@ git clone https://github.com/saidurpulok/my-portfolio.git
 cd my-portfolio
 ```
 
-You can then copy the folder contents to a folder named `your-username.github.io`, and then change all the
+You can then copy the folder contents to a folder named `your-username.github.io`, and then change all the necessary information and images.
 
 ## Installation
 
@@ -72,7 +72,7 @@ First of all create a repository with the same name of your project. Then follow
 
 2. **GitHub Actions Workflow**:
    
-   Go to the `Settings` tab in your repository and find the `Pages` option. Choose `Github Actions` from `Source` dropdown menu in place of "Deploy from Branch". It will automatically detect your NextJs app and you will get a `Configure` button. Hit the button and this will create a YML file. Commit the change and that's all you need to do!
+   Go to the `Settings` tab in your repository and find the `Pages` option. Choose `Github Actions` from `Source` dropdown menu instead of "Deploy from Branch". It will automatically detect your NextJs app and you will get a `Configure` button. Hit the button and this will create a YML file. Commit the change and that's all you need to do!
    The workflow YAML file (`.github/workflows/nextjs.yml`) will be triggered automatically whenever you push to `main`.
 
 You can view the deployment status in the "Actions" tab of your repository on GitHub.
