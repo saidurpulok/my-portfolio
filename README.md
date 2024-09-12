@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here's an updated version of the README file, taking into account that you used GitHub Actions for deployment:
+
+```markdown
+# Next.js Static Site for GitHub Pages (via GitHub Actions)
+
+This repository contains a Next.js project configured for static export and deployed automatically to GitHub Pages using GitHub Actions.
+
+## Prerequisites
+
+Before getting started, ensure you have the following installed on your system:
+- Node.js (12.x or higher)
+- npm (6.x or higher)
+- Git
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, clone the repository to your local machine.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/saidurpulok/my-portfolio.git
+cd my-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can then copy the folder contents to a folder named `your-username.github.io`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+After cloning, install the required dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Make sure your `next.config.js` file includes the necessary settings for static export:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```js
+// next.config.js
+module.exports = {
+  output: 'export',
+  images: {
+    unoptimized: true
+  },
+  trailingSlash: true,
+};
+```
 
-## Deploy on Vercel
+This configuration ensures that the project is set up for static export, which is necessary for deployment to GitHub Pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Building the Site Locally (Optional)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To build the site locally, you can run:
+
+```bash
+npm run build
+```
+
+This will generate the static files necessary for deployment in the `.next` directory, but **this step is optional** as GitHub Actions will handle the build and deployment for you.
+
+
+### Steps for Deployment in Github Pages
+
+First of all create a repository with the same name of your project. Then follow the usual steps to connect the local repository to github and then the following steps.
+
+1. **Push your code to GitHub**:
+
+   After making changes or adding new content to the site, push the changes to the `main` branch:
+
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
+
+2. **GitHub Actions Workflow**:
+   
+   Go to the `Settings` tab in your repository and find the `Pages` option. Choose `Github Actions` from `Source` dropdown menu in place of "Deploy from Branch". It will automatically detect your NextJs app and you will get a `Configure` button. Hit the button and this will create a YML file. Commit the change and that's all you need to do!
+   The workflow YAML file (`.github/workflows/nextjs.yml`) will be triggered automatically whenever you push to `main`.
+
+You can view the deployment status in the "Actions" tab of your repository on GitHub.
+
+### GitHub Pages URL
+
+After deployment, your site will be available at:
+
+```
+https://your-username.github.io/
+```
+
+
+## Contributing
+
+Contributions are welcome! Feel free to open a pull request with any changes or suggestions.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+```
